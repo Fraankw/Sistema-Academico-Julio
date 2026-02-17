@@ -33,34 +33,41 @@
             <button class="btn btn-primary btn-sm">Vista Lista</button>
             <button class="btn btn-outline-secondary btn-sm">Calendario</button>
         </div>
-        </div>
+        <div class="d-flex justify-content-end gap-2 mb-2">
+    <button class="btn btn-light btn-sm border text-muted">🖨️ Imprimir</button>
+    <button class="btn btn-light btn-sm border text-muted">📊 Excel</button>
+    <button class="btn btn-danger btn-sm">🚪 Salir</button>
+</div>
         <div class="card shadow-sm border-0 mt-3">
     <div class="table-responsive">
         <table class="table table-bordered mb-0">
-            <thead class="table-light text-center">
-                <tr class="small">
-                    <th style="width: 80px;">HORA</th>
-                    <th>LUNES</th>
-                    <th>MARTES</th>
-                    <th>MIÉRCOLES</th>
-                    <th>JUEVES</th>
-                    <th>VIERNES</th>
-                </tr>
+            <tr class="table-secondary small text-uppercase">
+                <th>CÓDIGO</th>
+                <th>ASIGNATURA</th>
+                <th>GRUPO</th>
+                <th>DÍA</th>
+                <th>HORARIO</th>
+                <th>AULA</th>
+            </tr>
             </thead>
-            <tbody class="text-center">
-                <tr>
-                    <td class="hora-col">8</td>
-                    <td></td>
-                    <td class="bg-primary text-white small align-middle"><strong>PROGRAMACIÓN WEB</strong><br><small>E201</small>
-                    <td></td><td></td><td></td>
-                </tr>
-                <tr><td class="hora-col">9</td><td></td><td></td><td></td><td></td><td></td></tr>
-                <tr><td class="hora-col">10</td><td></td><td></td><td></td><td></td><td></td></tr>
-                <tr><td class="hora-col">11</td><td></td><td></td><td></td><td></td><td></td></tr>
-                <tr><td class="hora-col">12</td><td></td><td></td><td></td><td></td><td></td></tr>
-                <tr><td class="hora-col">13</td><td></td><td></td><td></td><td></td><td></td></tr>
-                <tr><td class="hora-col">14</td><td></td><td></td><td></td><td></td><td></td></tr>
-            </tbody>
+        <tbody class="small">
+            <tr>
+             <td>0413</td>
+                <td class="text-primary fw-bold">PROGRAMACIÓN WEB</td>
+                <td><span class="badge rounded-pill bg-secondary">Gpo 1</span></td>
+                <td>MARTES</td>
+                <td>10:00 - 11:40</td>
+                <td><span class="badge rounded-pill bg-warning text-dark">E201</span></td>
+    </tr>
+    <tr>
+        <td>0402</td>
+        <td class="text-muted text-uppercase">Intro. Ingeniería</td>
+        <td><span class="badge rounded-pill bg-info text-dark">Gpo 3</span></td>
+        <td>LUNES</td>
+        <td>08:00 - 09:40</td>
+        <td><span class="badge rounded-pill bg-light text-dark border">D104</span></td>
+    </tr>
+</tbody>
         </table>
     </div>
 </div>
