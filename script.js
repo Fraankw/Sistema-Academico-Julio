@@ -26,7 +26,6 @@ function generarCalendario() {
             <td class="hora-col">${h}</td>
             ${dias.slice(1).map(d => {
                 const materia = horarios.find(m => m.dia === d && m.hora === m.hora.split(' ')[0] && h.startsWith(m.hora.substring(0,2)));
-                // Nota: La lógica de búsqueda puede ajustarse según el formato exacto de tu hora
                 const m = horarios.find(item => item.dia === d && item.hora.startsWith(h.substring(0,2)));
                 
                 return m 
@@ -36,3 +35,25 @@ function generarCalendario() {
         </tr>
     `).join('');
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btnLista = document.getElementById('btn-vista-lista');
+    const btnCale = document.getElementById('btn-vista-calendario');
+    const divLista = document.getElementById('vista-lista');
+    const divCale = document.getElementById('vista-calendario');
+
+    btnCale.addEventListener('click', () => {
+        divLista.classList.add('d-none');
+        divCale.classList.remove('d-none');
+        btnCale.classList.replace('btn-outline-secondary', 'btn-primary');
+        btnLista.classList.replace('btn-primary', 'btn-outline-secondary');
+        generarCalendario(); // Renderizado al cambiar de vista
+    });
+
+    btnLista.addEventListener('click', () => {
+        divCale.classList.add('d-none');
+        divLista.classList.remove('d-none');
+        btnLista.classList.replace('btn-outline-secondary', 'btn-primary');
+        btnCale.classList.replace('btn-primary', 'btn-outline-secondary');
+    });
+});
