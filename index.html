@@ -30,15 +30,29 @@
         </h5>
         
         <div class="btn-group shadow-sm">
-            <button class="btn btn-primary btn-sm">Vista Lista</button>
-            <button class="btn btn-outline-secondary btn-sm">Calendario</button>
+            <button id="btn-vista-lista" class="btn btn-primary btn-sm">Vista Lista</button>
+            <button id="btn-vista-calendario" class="btn btn-outline-secondary btn-sm">Calendario</button>
         </div>
         <div class="d-flex justify-content-end gap-2 mb-2">
         <button class="btn btn-light btn-sm border text-muted">🖨️ Imprimir</button>
         <button class="btn btn-light btn-sm border text-muted">📊 Excel</button>
         <button class="btn btn-danger btn-sm">🚪 Salir</button>
-        </div>
+         </div>
     </div>
+    <div id="vista-lista">
+    </div>
+    <div id="vista-calendario" class="card shadow-sm border-0 mt-3 d-none">
+    <div class="table-responsive">
+        <table class="table table-bordered mb-0 align-middle text-center">
+            <thead class="table-light">
+                <tr id="header-calendario">
+                    </tr>
+            </thead>
+            <tbody id="body-calendario">
+                </tbody>
+        </table>
+    </div>
+</div>
         <div class="card shadow-sm border-0 mt-3">
     <div class="table-responsive">
             <table class="table table-bordered table-striped mb-0 align-middle text-center">
@@ -138,5 +152,7 @@
     </div>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
 </body>
 </html>
